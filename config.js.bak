@@ -1,0 +1,40 @@
+global.owner = ['6285869074622']  
+global.mods = ['6285869074622'] 
+global.prems = ['6285869074622']
+global.nameowner = 'ZansLord'
+global.numberowner = '6285869074622' 
+global.mail = 'abdulzans11@gmail.com' 
+global.gc = 'https://chat.whatsapp.com/HvWOnl4wohQ7magRrH01In'
+global.instagram = 'https://instagram.com/elk_aff'
+global.wm = '© ᴇʟᴋᴀғғ'
+global.wait = '_*Tunggu sedang di proses...*_'
+global.eror = '_*Server Error*_'
+global.stiker_wait = '*⫹⫺ Stiker sedang dibuat...*'
+global.packname = 'Made With'
+global.author = 'Elkaff Bot WhatsApp'
+global.maxwarn = '5' // Peringatan maksimum
+
+//INI WAJIB DI ISI!//
+global.btc = 'elkaff872521' 
+//Daftar terlebih dahulu https://api.botcahx.live
+
+//INI OPTIONAL BOLEH DI ISI BOLEH JUGA ENGGA//
+global.lann = 'ldZQpCgJ'
+//Daftar https://api.betabotz.org 
+
+global.APIs = {   
+  btc: 'https://api.botcahx.live'
+}
+global.APIKeys = { 
+  'https://api.botcahx.live': 'elkaff872521' 
+}
+
+let fs = require('fs')
+let chalk = require('chalk')
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+  fs.unwatchFile(file)
+  console.log(chalk.redBright("Update 'config.js'"))
+  delete require.cache[file]
+  require(file)
+})
